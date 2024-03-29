@@ -1,0 +1,132 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+// 키맵에디터 사용을위한 파일임. 수정하고 나서 boards-sheilds-lily58의 키맵 파일에 수동으로 업데이트해줄것
+
+#include <dt-bindings/zmk/mouse.h>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        three {
+            bindings = <&to 3>;
+            key-positions = <53 42>;
+            timeout-ms = <100>;
+            layers = <0>;
+        };
+
+        threestick {
+            bindings = <&sl 3>;
+            key-positions = <53 25>;
+            timeout-ms = <100>;
+            layers = <0>;
+        };
+
+        ralt {
+            bindings = <&kp RIGHT_ALT>;
+            key-positions = <53 50>;
+            timeout-ms = <100>;
+            layers = <0>;
+        };
+
+        Nkey {
+            bindings = <&kp N>;
+            key-positions = <53 37>;
+            timeout-ms = <100>;
+            layers = <0>;
+        };
+
+        RctrlM {
+            bindings = <&kp RCTRL>;
+            key-positions = <53 52>;
+            timeout-ms = <100>;
+            layers = <0>;
+        };
+
+        rbackspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <0 52>;
+            timeout-ms = <100>;
+        };
+
+        rdel {
+            bindings = <&kp DELETE>;
+            key-positions = <50 0>;
+            timeout-ms = <100>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            // ------------------------------------------------------------------------------------------------------------
+            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
+            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
+            // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
+
+            display-name = "default";
+            bindings = <
+&kp GRAVE  &kp N1          &kp N2  &kp N3        &kp N4  &kp N5                            &kp N6         &kp N7  &kp N8     &kp N9   &kp N0    &kp BACKSPACE
+&kp TAB    &kp Q           &kp W   &kp E         &kp R   &kp T                             &kp Y          &kp U   &kp I      &kp O    &kp P     &kp DELETE
+&kp ENTER  &kp A           &kp S   &kp D         &kp F   &kp G                             &kp H          &kp J   &kp K      &kp L    &kp SQT   &kp ENTER
+&kp LCTRL  &kp LEFT_SHIFT  &kp Z   &kp X         &kp C   &kp V     &kp B        &kp B      &kp N          &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                                   &kp LEFT_WIN  &mo 1   &kp LALT  &kp SPACE    &kp SPACE  &kp RIGHT_ALT  &mo 1   &kp RCTRL
+            >;
+        };
+
+        fn1 {
+            // ------------------------------------------------------------------------------------------------------------
+            // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
+            // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
+            // |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
+            // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
+            //                     |      |      |      |        |  |       |      |       |       |
+
+            display-name = "fn1";
+            bindings = <
+&kp ESCAPE  &kp F1          &kp F2          &kp F3     &kp F4  &kp F5                          &kp F7  &kp F8  &kp F9          &kp F10       &kp F11          &kp F12
+&trans      &mkp LCLK       &kp UP_ARROW    &mkp RCLK  &trans  &kp Y                           &trans  &trans  &trans          &kp UP_ARROW  &kp SEMI         &kp PRINTSCREEN
+&trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans  &trans                          &trans  &trans  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &kp LG(LS(S))
+&mo 2       &kp LEFT_SHIFT  &trans          &kp COMMA  &trans  &trans        &to 3     &trans  &trans  &trans  &trans          &kp MINUS     &kp EQUAL        &mo 2
+                                            &trans     &trans  &kp LEFT_ALT  &trans    &trans  &trans  &trans  &trans
+            >;
+        };
+
+        fn2 {
+            // ------------------------------------------------------------------------------------------------------------
+            // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
+            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
+            // |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
+            // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
+            //                     |      |      |      |        |  |       |      |       |       |
+
+            display-name = "fn2";
+            bindings = <
+&bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans  &trans  &trans     &trans     &trans
+&bt BT_CLR_ALL  &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans  &trans     &kp COLON  &trans
+&trans          &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans  &trans     &trans     &trans
+&trans          &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &kp UNDER  &kp PLUS   &trans
+                                            &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&kp BACKSPACE    &kp NUMBER_6  &kp NUMBER_7  &kp N8         &kp N9     &kp N0                               &trans  &trans  &trans  &trans  &trans  &trans
+&kp DELETE       &kp Y         &kp U         &kp I          &kp O      &kp P                                &trans  &trans  &trans  &trans  &trans  &trans
+&kp ENTER        &kp H         &kp J         &kp K          &kp L      &kp APOSTROPHE                       &trans  &trans  &trans  &trans  &trans  &trans
+&kp RIGHT_SHIFT  &kp B         &kp N         &kp M          &kp COMMA  &kp PERIOD      &to 0        &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                             &kp RIGHT_ALT  &to 0      &kp RCTRL       &kp SPACE    &trans  &trans  &trans  &trans
+            >;
+        };
+    };
+};
