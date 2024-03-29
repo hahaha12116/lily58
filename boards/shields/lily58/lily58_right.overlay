@@ -20,3 +20,10 @@
         , <&pro_micro 19 GPIO_ACTIVE_HIGH>
         ;
 };
+
+&pro_micro_spi {
+    status = "okay";
+    glidepoint: glidepoint@2a {
+        status = "okay";
+    };
+};
