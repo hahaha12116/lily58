@@ -1,0 +1,5 @@
+config SHIELD_ERGOTHWACK_LEFT
+    def_bool $(shields_list_contains,HLily58_left)
+
+config SHIELD_ERGOTHWACK_RIGHT
+    def_bool $(shields_list_contains,HLily58_right)
