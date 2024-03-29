@@ -21,9 +21,16 @@
         ;
 };
 
-&pro_micro_spi {
+&spi0 {
     status = "okay";
-    glidepoint: glidepoint@2a {
+    clock-frequency = < 400000 >;
+    cirque: cirque@2a {
+        compatible = "cirque,pinnacle";
+        reg = <0x2a>;
         status = "okay";
+        dr-gpios = <&gpio0 6 (GPIO_ACTIVE_HIGH)>;
+        sensitivity = "2x";
+        sleep;
+        no-taps;
     };
-};
+   };
