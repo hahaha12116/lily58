@@ -21,15 +21,4 @@
         ;
 };
 
-/&spi {
-    status = "okay";
-    spidev@0 {
-        compatible = "zmk,gpio-595";
-        reg = <0>; // SPI 장치의 번호에 따라서 변경해야 합니다.
-        spi-max-frequency = <200000>; // SPI 통신 최대 주파수 설정 (예: 200kHz)
-        status = "okay";
-        cs-gpios = <&nice_nano_spi_cs GPIO_ACTIVE_LOW>; // Nice!nano의 CS 핀을 설정합니다.
-        #gpio-cells = <2>;
-        ngpios = <8>;
-    };
-};
+
