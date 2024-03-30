@@ -17,48 +17,48 @@
         three {
             bindings = <&to 3>;
             key-positions = <53 42>;
-            timeout-ms = <100>;
+            timeout-ms = <50>;
             layers = <0>;
         };
 
         threestick {
             bindings = <&sl 3>;
             key-positions = <53 25>;
-            timeout-ms = <100>;
+            timeout-ms = <50>;
             layers = <0>;
         };
 
         ralt {
             bindings = <&kp RIGHT_ALT>;
             key-positions = <53 50>;
-            timeout-ms = <100>;
+            timeout-ms = <50>;
             layers = <0>;
         };
 
         Nkey {
             bindings = <&kp N>;
             key-positions = <53 37>;
-            timeout-ms = <100>;
+            timeout-ms = <50>;
             layers = <0>;
         };
 
         RctrlM {
             bindings = <&kp RCTRL>;
             key-positions = <53 52>;
-            timeout-ms = <100>;
+            timeout-ms = <50>;
             layers = <0>;
         };
 
         rbackspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <0 52>;
-            timeout-ms = <100>;
+            timeout-ms = <50>;
         };
 
         rdel {
             bindings = <&kp DELETE>;
             key-positions = <50 0>;
-            timeout-ms = <100>;
+            timeout-ms = <50>;
         };
     };
 
