@@ -60,6 +60,7 @@
             key-positions = <50 0>;
             timeout-ms = <50>;
         };
+
   leftbackdouble {
             bindings = <&kp BACKSPACE>;
             key-positions = <0 1>;
