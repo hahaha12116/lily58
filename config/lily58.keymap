@@ -65,36 +65,49 @@
             bindings = <&kp BACKSPACE>;
             key-positions = <0 1>;
             timeout-ms = <50>;
+            layers = <0>;
         };
 
         leftdeletedouble {
             bindings = <&kp DELETE>;
             key-positions = <12 13>;
             timeout-ms = <50>;
+            layers = <0>;
         };
 
         f1double {
             bindings = <&kp F1>;
             key-positions = <13 1>;
             timeout-ms = <50>;
+            layers = <0>;
         };
 
-        f2doubli {
+        f2double {
             bindings = <&kp F2>;
             key-positions = <2 14>;
             timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        f3double {
+            bindings = <&kp F3>;
+            key-positions = <3 15>;
+            timeout-ms = <50>;
+            layers = <0>;
         };
 
         f4double {
             bindings = <&kp F4>;
-            key-positions = <16 4>;
+            key-positions = <4 16>;
             timeout-ms = <50>;
+            layers = <0>;
         };
 
         f5double {
             bindings = <&kp F5>;
             key-positions = <5 17>;
             timeout-ms = <50>;
+            layers = <0>;
         };
     };
 
