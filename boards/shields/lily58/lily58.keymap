@@ -49,30 +49,18 @@
             layers = <0>;
         };
 
-        rbackspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <0 52>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        rdel {
-            bindings = <&kp DELETE>;
-            key-positions = <50 0>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-  leftbackdouble {
+        leftbackdouble {
             bindings = <&kp BACKSPACE>;
             key-positions = <0 1>;
             timeout-ms = <50>;
+            layers = <0>;
         };
 
         leftdeletedouble {
             bindings = <&kp DELETE>;
             key-positions = <12 13>;
             timeout-ms = <50>;
+            layers = <0>;
         };
 
         f1double {
@@ -109,8 +97,21 @@
             timeout-ms = <50>;
             layers = <0>;
         };
-    };
 
+        hangeuldouble {
+            bindings = <&kp RIGHT_ALT>;
+            key-positions = <50 51>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        hanjadouble {
+            bindings = <&kp RCTRL>;
+            key-positions = <51 52>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
