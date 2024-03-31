@@ -12,6 +12,7 @@
 //#include <behaviors/mouse_keys.dtsi>
 
 
+
 / {
     chosen {
         zephyr,display = &oled;
