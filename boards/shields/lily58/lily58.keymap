@@ -146,6 +146,20 @@
             timeout-ms = <50>;
             layers = <0>;
         };
+    
+        leftlcikcombo {
+            bindings = <&mkp LCLK>;
+            key-positions = <25 13>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        rightclickcombo {
+            bindings = <&mkp RCLK>;
+            key-positions = <27 15>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
     };
 
     keymap {
