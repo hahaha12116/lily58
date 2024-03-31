@@ -9,6 +9,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/keys.h>
 
 / {
     combos {
@@ -177,7 +178,7 @@
 
         dot3 {
             bindings = <&dot3>;
-            key-positions = <54 47>;
+            key-positions = <47 55>;
             timeout-ms = <50>;
             layers = <0>;
         };
@@ -189,12 +190,38 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_3>,
+                <&kt LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_3>,
                 <&macro_wait_time 100>,
                 <&macro_release>,
-                <&kp LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_3>;
+                <&kt LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_3>;
 
             label = "DOT3";
+        };
+
+        new_macro2: new_macro2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kt LEFT_ALT &kp KP_NUMBER_4 &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_8 &kp KP_NUMBER_2>,
+                <&macro_wait_time 100>,
+                <&macro_release>,
+                <&kt LEFT_ALT &kp KP_NUMBER_4 &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_8 &kp KP_NUMBER_2>;
+
+            label = "NEW_MACRO2";
+        };
+
+        new_macro3: new_macro3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kt LEFT_ALT &kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_3>,
+                <&macro_wait_time 100>,
+                <&macro_release>,
+                <&kt LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_3 &kp KP_NUMBER_0>;
+
+            label = "NEW_MACRO3";
         };
     };
 
@@ -257,11 +284,11 @@
 
         layer_3 {
             bindings = <
-&kp BACKSPACE    &kp NUMBER_6  &kp NUMBER_7  &kp N8     &kp N9     &kp N0                  &trans  &trans  &trans  &trans  &trans  &trans
-&kp DELETE       &kp Y         &kp U         &kp I      &kp O      &kp P                   &trans  &trans  &trans  &trans  &trans  &trans
-&kp ENTER        &kp H         &kp J         &kp K      &kp L      &kp APOSTROPHE          &trans  &trans  &trans  &trans  &trans  &trans
-&kp RIGHT_SHIFT  &kp B         &kp N         &kp M      &kp COMMA  &kp PERIOD              &to 0   &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp RIGHT_ALT    &to 0         &kp RCTRL     &kp SPACE                             &trans  &trans                  &trans  &trans
+&kp BACKSPACE    &kp NUMBER_6  &kp NUMBER_7  &kp N8     &kp N9     &kp N0                  &dot3   &new_macro2  &new_macro3  &trans  &trans  &trans
+&kp DELETE       &kp Y         &kp U         &kp I      &kp O      &kp P                   &trans  &trans       &trans       &trans  &trans  &trans
+&kp ENTER        &kp H         &kp J         &kp K      &kp L      &kp APOSTROPHE          &trans  &trans       &trans       &trans  &trans  &trans
+&kp RIGHT_SHIFT  &kp B         &kp N         &kp M      &kp COMMA  &kp PERIOD              &to 0   &trans       &trans       &trans  &trans  &trans  &trans  &trans
+&kp RIGHT_ALT    &to 0         &kp RCTRL     &kp SPACE                             &trans  &trans                            &trans  &trans
             >;
         };
     };
