@@ -195,8 +195,7 @@
                 <&macro_tap>,
                 <&kp KP_NUMBER_4 &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_8 &kp KP_NUMBER_2>,
                 <&macro_wait_time 100>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
+                <&macro_release>;
 
 
             label = "DOT3";
