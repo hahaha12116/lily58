@@ -193,7 +193,7 @@
                 <&kt LEFT_ALT &kp KP_NUMBER_4 &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_8 &kp KP_NUMBER_2>,
                 <&macro_wait_time 100>,
                 <&macro_release>,
-                <&kt LEFT_ALT &kp KP_NUMBER_4 &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_8 &kp KP_NUMBER_2>;
+                <&kp KP_NUMBER_4 &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_8 &kp KP_NUMBER_2 &kt LEFT_ALT>;
 
             label = "DOT3";
         };
