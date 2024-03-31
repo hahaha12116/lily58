@@ -5,7 +5,6 @@
  */
 // 키맵에디터 사용을위한 파일임. 수정하고 나서 boards-sheilds-lily58의 키맵 파일에 수동으로 업데이트해줄것
 
-
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -147,8 +146,8 @@
             timeout-ms = <50>;
             layers = <0>;
         };
-    
-      leftlcikcombo {
+
+        leftlcikcombo {
             bindings = <&mkp LCLK>;
             key-positions = <25 13>;
             timeout-ms = <50>;
@@ -190,11 +189,11 @@
 
             display-name = "default";
             bindings = <
-&mt ESCAPE GRAVE    &kp N1          &kp N2    &kp N3     &kp N4  &kp N5             &kp N6         &kp N7  &kp N8  &kp N9  &kp N0     &kp BACKSPACE
-&kp TAB       &kp Q           &kp W     &kp E      &kp R   &kp T              &kp Y          &kp U   &kp I   &kp O   &kp P      &kp DELETE
-&kp ENTER     &kp A           &kp S     &kp D      &kp F   &kp G              &kp H          &kp J   &kp K   &kp L   &kp SQT    &kp ENTER
-&kp LCTRL     &kp LEFT_SHIFT  &kp Z     &kp X      &kp C   &kp V              &kp B          &kp B   &kp N   &kp M   &kp COMMA  &kp DOT        &kp FSLH  &kp RSHFT
-&kp LEFT_WIN  &mo 1           &kp LALT  &kp SPACE                    &mkp MB1  &kp RIGHT_ALT         &mo 1   &kp RCTRL
+&mt ESCAPE GRAVE  &kp N1          &kp N2    &kp N3     &kp N4  &kp N5            &kp N6         &kp N7  &kp N8  &kp N9  &kp N0     &kp BACKSPACE
+&kp TAB           &kp Q           &kp W     &kp E      &kp R   &kp T             &kp Y          &kp U   &kp I   &kp O   &kp P      &kp DELETE
+&kp ENTER         &kp A           &kp S     &kp D      &kp F   &kp G             &kp H          &kp J   &kp K   &kp L   &kp SQT    &kp ENTER
+&kp LCTRL         &kp LEFT_SHIFT  &kp Z     &kp X      &kp C   &kp V             &kp B          &kp B   &kp N   &kp M   &kp COMMA  &kp DOT        &kp FSLH  &kp RSHFT
+&kp LEFT_WIN      &mo 1           &kp LALT  &kp SPACE                  &mkp MB1  &kp RIGHT_ALT                  &mo 1   &kp RCTRL
             >;
         };
 
@@ -208,11 +207,11 @@
 
             display-name = "fn1";
             bindings = <
-&kp ESCAPE  &kp F1          &kp F2          &kp F3     &kp F4  &kp F5          &kp F7  &kp F8  &kp F9          &kp F10       &kp F11          &kp F12
-&trans      &mkp LCLK       &kp UP_ARROW    &mkp RCLK  &mwh SCROLL_UP  &kp Y           &trans  &trans  &trans          &kp UP_ARROW  &kp SEMI         &kp PRINTSCREEN
-&trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &mwh SCROLL_DOWN &trans          &trans  &trans  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &kp LG(LS(S))
-&mo 2       &kp LEFT_SHIFT  &trans          &kp COMMA  &trans  &trans          &to 3   &trans  &trans          &trans        &trans           &kp MINUS        &kp EQUAL  &mo 2
-&trans      &trans          &kp LEFT_ALT    &trans                     &mkp MB2  &trans  &trans        &trans
+&kp ESCAPE  &kp F1          &kp F2          &kp F3     &kp F4            &kp F5            &kp F7  &kp F8  &kp F9          &kp F10       &kp F11          &kp F12
+&trans      &mkp LCLK       &kp UP_ARROW    &mkp RCLK  &mwh SCROLL_UP    &kp Y             &trans  &trans  &trans          &kp UP_ARROW  &kp SEMI         &kp PRINTSCREEN
+&trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &mwh SCROLL_DOWN  &trans            &trans  &trans  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &kp LG(LS(S))
+&mo 2       &kp LEFT_SHIFT  &trans          &kp COMMA  &trans            &trans            &to 3   &trans  &trans          &trans        &trans           &kp MINUS        &kp EQUAL  &mo 2
+&trans      &trans          &kp LEFT_ALT    &trans                               &mkp MB2  &trans                          &trans        &trans
             >;
         };
 
@@ -236,11 +235,11 @@
 
         layer_3 {
             bindings = <
-&kp BACKSPACE    &kp NUMBER_6  &kp NUMBER_7  &kp N8     &kp N9     &kp N0                  &trans  &trans            &trans  &trans  &trans  &trans
-&kp DELETE       &kp Y         &kp U         &kp I      &kp O      &kp P                   &trans  &trans    &trans  &trans  &trans  &trans
+&kp BACKSPACE    &kp NUMBER_6  &kp NUMBER_7  &kp N8     &kp N9     &kp N0                  &trans  &trans  &trans  &trans  &trans  &trans
+&kp DELETE       &kp Y         &kp U         &kp I      &kp O      &kp P                   &trans  &trans  &trans  &trans  &trans  &trans
 &kp ENTER        &kp H         &kp J         &kp K      &kp L      &kp APOSTROPHE          &trans  &trans  &trans  &trans  &trans  &trans
-&kp RIGHT_SHIFT  &kp B         &kp N         &kp M      &kp COMMA  &kp PERIOD              &to 0   &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&kp RIGHT_ALT    &to 0         &kp RCTRL     &kp SPACE                             &trans  &trans                            &trans  &trans
+&kp RIGHT_SHIFT  &kp B         &kp N         &kp M      &kp COMMA  &kp PERIOD              &to 0   &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp RIGHT_ALT    &to 0         &kp RCTRL     &kp SPACE                             &trans  &trans                  &trans  &trans
             >;
         };
     };
