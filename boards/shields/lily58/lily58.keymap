@@ -184,19 +184,20 @@
         };
     };
 
-    macros {
+ macros {
         dot3: dot3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kt LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_3>,
+                <&kt LEFT_ALT &kp KP_NUMBER_4 &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_8 &kp KP_NUMBER_2>,
                 <&macro_wait_time 100>,
                 <&macro_release>,
-                <&kt LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_3>;
+                <&kp KP_NUMBER_4 &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_8 &kp KP_NUMBER_2 &kt LEFT_ALT>;
 
             label = "DOT3";
         };
+    };
 
         new_macro2: new_macro2 {
             compatible = "zmk,behavior-macro";
