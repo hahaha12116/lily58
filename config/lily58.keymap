@@ -189,9 +189,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp RIGHT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_3>,
+                <&kp LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_3>,
                 <&macro_wait_time 100>,
-                <&macro_release>;
+                <&macro_release>,
+                <&kp LEFT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_3>;
 
             label = "DOT3";
         };
