@@ -4,14 +4,15 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: petejohanson
       url-base: https://github.com/petejohanson
+    - name: urob
+      url-base: https://github.com/urob
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: main
+      remote: urob
+      revision: mouse-3.2
       import: app/west.yml
     - name: cirque-input-module
       remote: petejohanson
       revision: main
-
-self:
+  self:
     path: config
