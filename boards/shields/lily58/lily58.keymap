@@ -173,6 +173,26 @@
             key-positions = <55 54>;
             timeout-ms = <50>;
             layers = <0>;
+
+       dot3 {
+            bindings = <&dot3>;
+            key-positions = <54 47>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+    };
+
+    macros {
+        dot3: dot3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RIGHT_ALT &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_3>,
+                <&macro_wait_time 100>,
+                <&macro_release>;
+
+            label = "DOT3";
         };
     };
 
