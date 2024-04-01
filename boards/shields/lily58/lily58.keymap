@@ -183,6 +183,12 @@
             timeout-ms = <50>;
             layers = <0>;
         };
+      wsub {
+            bindings = <&kp F3>;
+            key-positions = <14 26>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
     
     };
 
