@@ -28,12 +28,7 @@
             layers = <0>;
         };
 
-        ralt {
-            bindings = <&kp RIGHT_ALT>;
-            key-positions = <53 50>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
+
 
         Nkey {
             bindings = <&kp N>;
