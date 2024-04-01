@@ -177,7 +177,7 @@
 
         dot3 {
             bindings = <&dot3>;
-            key-positions = <47 55>;
+            key-positions = <47 57>;
             timeout-ms = <50>;
             layers = <0>;
         };
