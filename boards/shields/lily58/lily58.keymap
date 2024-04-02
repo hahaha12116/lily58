@@ -13,7 +13,6 @@
 // 모드탭 시간조절
 
 &mt { 
-tapping-term-ms = <300>; 
 quick-tap-ms = <200>;
 };
 
