@@ -13,11 +13,9 @@
 // 모드탭 시간조절
 
 &mt { 
-tapping-term-ms: 300
-//퀵탭 비활성화
+tapping-term-ms: 1000
 quick-tap-ms: 800
-require-prior-idle-ms: 300
-};
+require-prior-idle-ms: -1};
 
 / {
     combos {
