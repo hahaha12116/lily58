@@ -11,10 +11,10 @@
 #include <dt-bindings/zmk/keys.h>
 
 // 모드탭 시간조절
-
+0
 &mt { 
-tapping-term-ms = <170>;
-quick-tap-ms = <200>;
+tapping-term-ms = <1000>;
+quick-tap-ms = <1000>;
 flavor = "tap-preferred";};
 
 / {
