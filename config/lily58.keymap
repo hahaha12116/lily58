@@ -11,9 +11,8 @@
 #include <dt-bindings/zmk/keys.h>
 
 // 모드탭 시간조절
-&mt {
-    tapping-term-ms = <400>;
-};
+
+&mt { tapping-term-ms = <400>; };
 
 / {
     combos {
@@ -28,14 +27,7 @@
 
         threestick {
             bindings = <&sl 3>;
-            key-positions = <53 25 18 19 20 21 22 23 30 31 32 33 34 35 44 45 46 47 48 49 55 56 57>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        ralt {
-            bindings = <&kp RIGHT_ALT>;
-            key-positions = <53 50>;
+            key-positions = <53 25>;
             timeout-ms = <50>;
             layers = <0>;
         };
@@ -43,13 +35,6 @@
         Nkey {
             bindings = <&kp N>;
             key-positions = <53 37>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        RctrlM {
-            bindings = <&kp RCTRL>;
-            key-positions = <53 52>;
             timeout-ms = <50>;
             layers = <0>;
         };
@@ -153,29 +138,15 @@
         };
 
         leftlcikcombo {
-            bindings = <&mkp LCLK>;
+            bindings = <&kp F7>;
             key-positions = <25 13>;
             timeout-ms = <50>;
             layers = <0>;
         };
 
-        rightclickcombo {
-            bindings = <&mkp RCLK>;
-            key-positions = <27 15>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
         leftwheelcombo {
-            bindings = <&mkp MCLK>;
+            bindings = <&kp F8>;
             key-positions = <14 26>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        rightwheelcombo {
-            bindings = <&mkp MCLK>;
-            key-positions = <55 54>;
             timeout-ms = <50>;
             layers = <0>;
         };
@@ -212,25 +183,25 @@
         };
     };
 
-   keymap {
+    keymap {
         compatible = "zmk,keymap";
 
-// 첫번째 레이어
+        // 첫번째 레이어
+
         default_layer {
-                    display-name = "default";
+            display-name = "default";
             bindings = <
 &mt ESCAPE GRAVE  &kp N1          &kp N2    &kp N3     &kp N4  &kp N5             &kp N6         &kp N7  &kp N8  &kp N9  &kp N0     &kp BACKSPACE
-&kp TAB           &mt F7 Q        &mt F8 W  &kp E      &kp R   &kp T              &kp Y          &kp U   &kp I   &kp O   &kp P      &kp DELETE
+&kp TAB           &kp Q           &kp W     &kp E      &kp R   &kp T              &kp Y          &kp U   &kp I   &kp O   &kp P      &kp DELETE
 &kp ENTER         &kp A           &kp S     &kp D      &kp F   &kp G              &kp H          &kp J   &kp K   &kp L   &kp SQT    &kp ENTER
 &kp LCTRL         &kp LEFT_SHIFT  &kp Z     &kp X      &kp C   &kp V              &kp B          &kp B   &kp N   &kp M   &kp COMMA  &kp DOT        &kp FSLH  &kp RSHFT
 &kp LEFT_WIN      &mo 1           &kp LALT  &kp SPACE                  &kp SPACE  &kp RIGHT_ALT                  &mo 1   &kp RCTRL
             >;
         };
 
+        //두번째 레이어
 
-//두번째 레이어
         fn1 {
-
             display-name = "fn1";
             bindings = <
 &kp ESCAPE  &kp F1          &kp F2          &kp F3     &kp F4             &kp F5            &kp F7  &kp F8  &kp F9          &kp F10       &kp F11          &kp F12
@@ -241,9 +212,9 @@
             >;
         };
 
-//세번째 레이어
+        //세번째 레이어
+
         fn2 {
-    
             display-name = "fn2";
             bindings = <
 &bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4          &trans  &trans  &trans  &trans  &trans     &trans
@@ -254,9 +225,9 @@
             >;
         };
 
-//네번째 레이어
-        layer_3 {
+        //네번째 레이어
 
+        layer_3 {
             bindings = <
 &kp BACKSPACE    &kp NUMBER_6  &kp NUMBER_7  &kp N8     &kp N9     &kp N0                  &dot3   &trans  &trans  &trans  &trans  &trans
 &kp DELETE       &kp Y         &kp U         &kp I      &kp O      &kp P                   &trans  &trans  &trans  &trans  &trans  &trans
@@ -266,7 +237,4 @@
             >;
         };
     };
-
-
-
 };
