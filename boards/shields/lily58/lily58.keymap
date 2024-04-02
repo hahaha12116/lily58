@@ -12,7 +12,7 @@
 
 // 모드탭 시간조절
 
-&mt { tapping-term-ms = <400>; };
+&mt { tapping-term-ms = <200>; };
 
 / {
     combos {
