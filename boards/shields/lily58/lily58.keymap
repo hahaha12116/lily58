@@ -15,7 +15,7 @@
 &mt { 
 tapping-term-ms: 300
 //퀵탭 비활성화
-quick-tap-ms: -1 
+quick-tap-ms: 800
 require-prior-idle-ms: 300
 };
 
