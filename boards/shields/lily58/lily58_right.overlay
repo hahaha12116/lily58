@@ -29,7 +29,7 @@
         compatible = "cirque,pinnacle";
         reg = <0x2a>;
         status = "okay";
-        dr-gpios = <&gpio0 6 (GPIO_ACTIVE_HIGH)>; // 이부분 나이스 나노의 006핀 값이 뭔지 알아야함
+        dr-gpios = <&gpio0 6 (GPIO_ACTIVE_HIGH)>; // 이부분 나이스 나노의 006핀 gpio 내거랑 일치했다
         sensitivity = "2x";
         sleep;
         no-taps;
