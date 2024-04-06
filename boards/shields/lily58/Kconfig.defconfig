@@ -17,6 +17,9 @@ if SHIELD_LILY58_LEFT || SHIELD_LILY58_RIGHT
 config ZMK_SLEEP
     default y
 
+config ZMK_IDLE_SLEEP_TIMEOUT
+    default 900000
+
 config ZMK_SPLIT
     default y
 
