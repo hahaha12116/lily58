@@ -14,7 +14,6 @@ config I2C
 
 config SSD1306
     default y
-
 endif
 
 if SHIELD_LILY58_LEFT
@@ -24,9 +23,6 @@ config ZMK_DISPLAY
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default n
-
-
-
 endif
 
 if SHIELD_LILY58_LEFT || SHIELD_LILY58_RIGHT
