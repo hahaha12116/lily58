@@ -6,7 +6,8 @@ config ZMK_SPLIT_ROLE_CENTRAL
     default y
 config ZMK_DISPLAY
     default y
-
+config INPUT_PINNACLE
+    default y
 endif
 
 
