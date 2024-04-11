@@ -1,13 +1,10 @@
 if SHIELD_LILY58_RIGHT
 
 config ZMK_KEYBOARD_NAME
-    default "Lily58"
+    default "Lily58"    
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
-config ZMK_DISPLAY
-    default y
-config INPUT_PINNACLE
-    default y
+ 
 endif
 
 
@@ -24,10 +21,8 @@ if SHIELD_LILY58_LEFT || SHIELD_LILY58_RIGHT
 
 config ZMK_SLEEP
     default y
-
 config ZMK_IDLE_SLEEP_TIMEOUT
     default 900000
-
 config ZMK_SPLIT
     default y
 
@@ -35,7 +30,6 @@ if ZMK_DISPLAY
 
 config I2C
     default y
-
 config SSD1306
     default y
 
