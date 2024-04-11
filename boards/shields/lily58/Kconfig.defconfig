@@ -6,6 +6,15 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
+config SPI
+    default N
+
+config I2C
+    default y
+
+config SSD1306
+    default y
+
 endif
 
 if SHIELD_LILY58_LEFT
