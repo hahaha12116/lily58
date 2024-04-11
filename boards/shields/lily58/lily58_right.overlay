@@ -44,4 +44,12 @@
     scale-multiplier = <5>;
     scale-divisor = <1>;
   };
+};
+
+//&usbd {
+//    status = "okay";
+//    cdc_acm_uart: cdc_acm_uart {
+//        compatible = "zephyr,cdc-acm-uart";
+//    };
+//};
 
