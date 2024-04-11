@@ -40,7 +40,7 @@
   cirque_listener {
     compatible = "zmk,input-listener";
     device = <&cirque>;
-    y-invert;
+    x-invert;
     scale-multiplier = <5>;
     scale-divisor = <1>;
   };
