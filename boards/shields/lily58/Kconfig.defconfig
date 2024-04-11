@@ -13,6 +13,10 @@ if SHIELD_LILY58_LEFT
 config ZMK_DISPLAY
     default y
 
+config ZMK_SPLIT_ROLE_CENTRAL
+    default n
+
+
 
 endif
 
